@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.6
+install:
+  - gem install jekyll
+  - yarn install
+script:
+  - yarn run prod
+  - jekyll build
+after_success:
+#  - git add -f _site && git commit -m "site build $TRAVIS_COMMIT"  > /dev/null 2>&1
+#  - git subtree push --prefix _site origin gh-pages > /dev/null 2>&1

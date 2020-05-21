@@ -29,3 +29,4 @@ exclude:
   - webpack.mix.js
   - node_modules
   - .idea/
+  - mix-manifest.json
