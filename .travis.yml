@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.6
+node:
+  - 12
 install:
   - gem install jekyll
   - yarn install
