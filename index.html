@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Thoughts"
+---
+
+{% for post in paginator.posts %}
+<div class="my-12 md:flex">
+    <div class="bg-cover bg-no-repeat bg-center mb-4 h-64 md:bg-auto bg-blue-300" style="background-image: url('{{ post.image }}')">
+        <a href="{{ post.url }}" class="inline-block h-64 w-64"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="{{ post.title }}"></a>
+    </div>
+    <div class="md:pl-10">
+        <a href="{{ post.url }}" class="font-sans font-bold text-4xl text-blue-700 leading-snug hover:text-blue-600">
+            {{ post.title }}
+        </a>
+        <div class="text-blue-400 mb-6">{{ post.date | date_to_string }}</div>
+        <div class="text-blue-700">{{ post.excerpt }}</div>
+    </div>
+</div>
+{% endfor %}
+
+{% if paginator.previous_page or paginator.next_page %}
+<div class="flex justify-between bg-blue-100 py-4 px-8">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="hover:text-blue-600">&larr; Previous</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="hover:text-blue-600">Next &rarr;</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+</div>
+{% endif %}

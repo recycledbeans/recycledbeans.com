@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/dist/app.css' | relative_url }}?v={{ site.css_hash }}">
+  </head>
+  <body class="bg-white">
+    <header class="py-3">
+      <div class="container mx-auto px-6 font-mono flex items-center justify-between">
+        <div>
+          <div class="pl-1 text-blue-800 text-xl"><a href="/">Matt Watson</a></div>
+        </div>
+        <div>
+          <ul class="hidden md:flex">
+            {% for item in site.data.nav %}
+            <li class="ml-6"><a href="{% link {{ item.page }} %}" class="{% if page.path == item.page %} underline {% endif %}">{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto my-4 px-6">
+      {{ content }}
+    </div>
+    <footer class="bg-blue-900 mt-24 text-white text-sm">
+      <div class="container mx-auto px-6 py-12">
+        <div class="md:flex justify-between">
+          <div>Copyright &copy; {{ 'now' | date: "%Y" }} Matthew Watson</div>
+          <div>
+            <a href="{{ site.repo }}{{ page.path }}" target="_blank">Catch a mistake? Submit a PR</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ '/dist/app.js' | relative_url }}?v={{ site.js_hash }}" type="text/javascript"></script>
+  </body>
+</html>

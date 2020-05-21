@@ -1,0 +1,31 @@
+url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Matt Watson" # the name of your site, e.g. ACME Corp.
+repo: "https://github.com/recycledbeans/recycledbeans.com/"
+
+excerpt_separator: "<!--more-->"
+
+plugins: [jekyll-paginate]
+paginate: 2
+paginate_path: "/p/:num/"
+permalink: pretty
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - src/
+  - package.json
+  - yarn.lock
+  - tailwind.config.js
+  - webpack.mix.js
+  - node_modules
+  - .idea/

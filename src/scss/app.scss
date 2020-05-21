@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+@tailwind screens;
+
+pre.highlight {
+  @apply .py-6 .px-10 .rounded-sm .my-6 .leading-loose .text-base;
+}
+
+.article-content {
+  p {
+    @apply .mt-4 .mb-6 .leading-relaxed;
+  }
+}
+
+@import '~pygments/dracula';
+
+@media (min-width: 640px) {
+  pre.highlight {
+
+  }
+}
+
+@media (min-width: 768px) {
+  pre.highlight, .article-body img {
+    @apply .-ml-10;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-body p > img {
+
+  }
+  pre.highlight, .article-body img {
+    @apply .-ml-16 .block;
+  }
+}
+
+//pre.highlight {
+//  @apply .bg-gray-800 .py-4 .px-4 .rounded-sm .text-white .my-6 .leading-loose;
+//
+//  .cp {
+//    @apply .text-gray-400;
+//  }
+//
+//  .nb {
+//    @apply .text-yellow-300;
+//  }
+//
+//  .p {
+//    @apply .text-blue-300;
+//  }
+//
+//  .nv {
+//    @apply .text-green-300;
+//  }
+//
+//  .nt {
+//    @apply .text-blue-200;
+//  }
+//  .na {
+//    @apply .text-yellow-300;
+//  }
+//  .s {
+//    @apply .text-green-300;
+//  }
+//}
