@@ -30,3 +30,17 @@ exclude:
   - node_modules
   - .idea/
   - mix-manifest.json
+  - Dockerfile
+  - CNAME
+
+
+js_hash: 
+css_hash: 
+
+
+js_hash: 7cef2b9ce4a3038a27a5a049c59602db
+css_hash: 
+
+
+js_hash: 7cef2b9ce4a3038a27a5a049c59602db
+css_hash: 

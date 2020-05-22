@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        'serif': ["'Roboto Slab'", "serif"],
+        'sans': ["'Source Sans Pro'", "sans-serif"]
+      },
       spacing: {
         '128': '32rem',
       },
@@ -38,7 +42,6 @@ module.exports = {
           800: '#14472A',
           900: '#0E2F1C',
         },
-
       }
     },
   },

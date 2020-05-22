@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
@@ -9,7 +11,7 @@ pre.highlight {
 
 .article-content {
   p {
-    @apply .mt-4 .mb-6 .leading-relaxed;
+    @apply .mt-4 .mb-6 .leading-relaxed .tracking-wide .font-serif .text-blue-700;
   }
 }
 
