@@ -17,7 +17,8 @@ mix.js('src/js/app.js', 'dist/')
     .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ]
-    });
+    })
+    .version();
 
 // Full API
 // mix.js(src, output);
