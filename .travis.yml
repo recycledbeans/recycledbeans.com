@@ -14,4 +14,4 @@ after_success:
 - git remote set-url origin "https://recycledbeansci:$GH_TOKEN@github.com/recycledbeans/recycledbeans.com.git" > /dev/null 2>&1
 - git fetch
 - git add -f _site && git commit -m "site build $TRAVIS_COMMIT"
-- git subtree push --prefix _site origin gh-pages
+- git push origin `git subtree split --prefix _site master`:gh-pages --force

@@ -31,5 +31,4 @@ exclude:
   - .idea/
   - mix-manifest.json
   - Dockerfile
-  - CNAME
 
