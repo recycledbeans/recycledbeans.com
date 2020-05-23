@@ -18,6 +18,8 @@ mix.js('src/js/app.js', 'dist/')
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ]
     })
+    .setPublicPath('./dist')
+    .copy('CNAME', 'dist/CNAME')
     .version();
 
 // Full API
