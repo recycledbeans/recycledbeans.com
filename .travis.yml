@@ -8,6 +8,8 @@ env:
     secure: ZbhFYVPi1o4nzM6yAWFl/Rd/WaCDAPUMmLPxJWIwGx7m6mDQLfAlx+17EGo/ltC888VOWiuKj9CpNEJuduNBHKf34436lzWOwaOrptQrVMWtLZ4Yl96IWFTkjM3nQZS3p3LgdTKc4KiI/m/j54italhQobFlzxc7ICCkXboAENkdLBYpM+SEgqRZaOXoYsfURSgZhVzLcJ69poAjibW1dgFO5PRbDpnKzGxOJiDyUeGESG25q3qQGQ4O8EhEMkUhAPOe1akJSRm7VTLWF51q45jpb3hxY6OkycNrm8ZmMvH0CYgfhXXh6Cxg3i7leXIfrY0UB3b2YNu09i0DcWjT4mIkFLkRM47lBqYF0SPpP8JOzPFzcHwVHZ8dND7lI4mIUr8GGKkWdN4qkTpdAhGMwp3GMCOo9dW8VqYnOrwpqfXkrw1OjY61c/3AKDr190APHJ0caAFNx3L7/YhIjE1jxVNjZV9hcB17AV9QPDB8LT16Dj7AgvsgAhHmdeplqxNwCn7+TRbR4fo30KVQE6DEAiXv6ztNPGn3XawzdvFwUkZf2RmnFDd35mVzFvXJuQcMsq6o1SygBXw2XTZTNVPwJ5XO62BulqfYsN5VQrTGI6WOzg+zxVJZo3smjGcyetMWKfPP8ezkneeFcxDJ6DTm+3CIXBhFsDLTFXKM31nsc8M=
 before_install:
 - docker login --username "$DOCKER_LOGIN" --password "$DOCKER_PASS" > /dev/null 2>&1
+- git clone https://github.com/recycledbeans/recycledbeans.com ~/build
+- cd ~/build
 install:
 - docker pull recycledbeans/recycledbeans.com
 script:
@@ -16,4 +18,4 @@ after_success:
 - git remote set-url origin "https://recycledbeansci:$GH_TOKEN@github.com/recycledbeans/recycledbeans.com.git" > /dev/null 2>&1
 - git fetch
 - git add -f _site && git commit -m "site build $TRAVIS_COMMIT"
-- git push origin `git subtree split --prefix _site master`:gh-pages --force
+- $TRAVIS_BRANCH = "master" && git push origin `git subtree split --prefix _site master`:gh-pages --force
