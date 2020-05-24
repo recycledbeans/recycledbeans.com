@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="{{ '/dist/app.css' | relative_url }}?v={{ site.css_hash }}">
   </head>
   <body class="bg-white">
-    <header class="py-3">
-      <div class="container mx-auto px-6 font-mono flex items-center justify-between">
-        <div>
-          <div class="pl-1 text-blue-800 text-xl"><a href="/">Matt Watson</a></div>
+    <header class="py-4">
+      <div class="container mx-auto px-6 font-mono flex items-center justify-center">
+        <div class="flex-1">
+            <!-- Categories here one day -->
         </div>
-        <div>
-          <ul class="hidden md:flex">
+        <div class="flex-1 text-xl text-center px-8">
+          <a class="inline-block bg-blue-800 text-white py-0 px-4" href="/">Matt Watson</a>
+        </div>
+        <div class="flex-1">
+          <ul class="hidden md:flex justify-end text-gray-700 items-center">
             {% for item in site.data.nav %}
             <li class="ml-6"><a href="{% link {{ item.page }} %}" class="{% if page.path == item.page %} underline {% endif %}">{{ item.label }}</a></li>
             {% endfor %}
+            {% include social.html %}
           </ul>
         </div>
       </div>
@@ -27,9 +31,11 @@
     <footer class="bg-blue-900 mt-24 text-white text-sm">
       <div class="container mx-auto px-6 py-12">
         <div class="md:flex justify-between">
-          <div>Copyright &copy; {{ 'now' | date: "%Y" }} Matthew Watson</div>
+          <div class="mb-6 text-center md:text-left">Copyright &copy; {{ 'now' | date: "%Y" }} Matthew Watson</div>
           <div>
-            <a href="{{ site.repo }}{{ page.path }}" target="_blank">Catch a mistake? Submit a PR</a>
+              <ul class="flex justify-center md:justify-end items-center">
+                  {% include social.html %}
+              </ul>
           </div>
         </div>
       </div>

@@ -5,14 +5,15 @@ layout: default
 <div class="">
     {% if page.image %}
     <div class="mb-8 -mx-6 md:mx-0">
-        <img src="{{ page.image }}" alt="{{ page.title }}">
+        <img src="{{ page.image }}" class="w-full" alt="{{ page.title }}">
     </div>
     {% endif %}
     <div class="lg:flex">
         <div class="article-body w-full md:pl-20 lg:pl-32">
-            <h1 id="article-title" class="font-sans font-bold text-4xl md:text-5xl text-blue-700 mb-3 leading-snug">{{ page.title }}</h1>
+            <h1 id="article-title" class="font-sans font-bold text-4xl md:text-5xl text-blue-700 mb-3 leading-snug mt-0!">{{ page.title }}</h1>
+            <div class="excerpt text-gray-600 text-2xl mb-2">{{ page.excerpt }}</div>
             {% if page.date %}
-            <div class="text-blue-400 mb-6">{{ page.date | date_to_string }}
+            <div class="text-green-400 mb-6">{{ page.date | date_to_string }}
                 <span class="inline-block mx-3 text-blue-200">&bull;</span>
                 {% assign page_words = page.content | split: " " %}{{ page_words.size | divided_by: 200.0 | ceil }} minute read
                 <span class="inline-block mx-3 text-blue-200">&bull;</span>
@@ -26,9 +27,25 @@ layout: default
             <div class="article-content text-lg">
                 {{ content}}
             </div>
+
+            <div class="my-12 py-3 pl-4 border-l-4 border-gray-300 text-blue-500 bg-gray-100">
+                <a href="{{ site.repo }}{{ page.path }}" target="_blank">Catch a mistake? Find a typo?</a>
+            </div>
+
+            <div class="my-12">
+                <div class="flex mt-6">
+                    <img class="rounded-full block h-24 w-24 mr-6 border-2 border-gray-200" src="https://avatars2.githubusercontent.com/u/13002230" alt="Matt Watson">
+                    <div class="text-blue-500">
+                        <h5 class="font-bold text-lg">About the Author</h5>
+                        <p class="my-4">Matt Watson is the Chief Technologist at <a href="https://devpartners.io" class="text-green-500">Development Partners</a>,
+                            a dev shop based in Fort Lauderdale, Florida.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="article-sidebar pl-0 md:pl-20 lg:pl-32 xl:pl-56 mt-4">
-            Sidebar content
+
         </div>
     </div>
 </div>
