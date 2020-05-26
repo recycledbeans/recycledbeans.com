@@ -4,7 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/dist/app.css' | relative_url }}?v={{ site.css_hash }}">
+    <link rel="stylesheet" href="{{ '/dist/app.css' | relative_url }}?v={{ site.data.assets['/app.css'] }}">
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image }}" />
+    {% endif %}
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,6 +57,6 @@
         </div>
       </div>
     </footer>
-    <script src="{{ '/dist/app.js' | relative_url }}?v={{ site.js_hash }}" type="text/javascript"></script>
+    <script src="{{ '/dist/app.js' | relative_url }}?v={{ site.data.assets['/app.js'] }}" type="text/javascript"></script>
   </body>
 </html>
