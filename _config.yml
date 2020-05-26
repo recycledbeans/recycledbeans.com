@@ -1,7 +1,7 @@
 url: "https://recycledbeans.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Matt Watson" # the name of your site, e.g. ACME Corp.
-repo: "https://github.com/recycledbeans/recycledbeans.com/"
+repo: "https://github.com/recycledbeans/recycledbeans.com/blob/master/"
 
 excerpt_separator: "<!--more-->"
 
