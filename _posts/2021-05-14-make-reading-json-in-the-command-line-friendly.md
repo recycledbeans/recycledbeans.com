@@ -1,6 +1,6 @@
 ---
 title: "Everyday Carry: Make Reading JSON in the Command Line Friendly"
-excerpt: "I don't know why it took so long for me to discover jq, but now I can't live without it"
+excerpt: "I don't know why it took so long for me to discover jq, but now I can't live without it."
 image: "/img/jq-the-office.png"
 image_credit: "The Office API being parsed by JQ"
 ---
