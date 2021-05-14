@@ -17,7 +17,7 @@ RUN echo '#!/bin/bash' > /root/script.sh
 RUN echo "yarn install && yarn run prod" >> /root/script.sh
 RUN echo "yarn run version" >> /root/script.sh
 #RUN echo "rm Gemfile.lock" >> /root/script.sh
-#RUN echo "bundle install" >> /root/script.sh
+# RUN echo "bundle install" >> /root/script.sh
 RUN echo "bundle exec jekyll build" >> /root/script.sh
 
 RUN gem install bundler

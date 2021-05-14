@@ -8,7 +8,7 @@ image_credit: "The Office API being parsed by JQ"
 I little while ago, I stumbled upon someone using [jq](https://stedolan.github.io/jq/){:target="_blank"} in a coding video, and I was blown away. Something so simple, yet so game-changing.
 If you've ever struggled reading long, complex JSON strings from API responses via **curl** or log files, then you might benefit from installing **jq**. [Installation instructions](https://stedolan.github.io/jq/download/){:target="_blank"} are available for most operating systems and distros.
 
-The most basic usage of **jq** is to make JSON output pretty, but there are plenty of other progressively more complex ways you can use the command to reformat and restructure your JSON data:
+The most basic usage of **jq** is to make JSON output pretty, but there are plenty of other progressively-more-complex ways you can use the command to reformat and restructure your JSON data:
 
 ## Examples
 
