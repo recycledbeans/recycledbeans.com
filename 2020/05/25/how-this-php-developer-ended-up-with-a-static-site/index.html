@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>How This PHP Developer Ended Up With A (PHP-Free) Static Website - Matt Watson</title>
+    <link rel="stylesheet" href="/dist/app.css?v=/app.css?id=e060bad002a77f63774f">
+    <meta property="og:title" content="How This PHP Developer Ended Up With A (PHP-Free) Static Website" />
+    <meta property="og:url" content="https://recycledbeans.com/2020/05/25/how-this-php-developer-ended-up-with-a-static-site/" />
+    
+    <meta property="og:image" content="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-1.2.1&q=60&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" />
+    
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-54W7VFH');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="bg-white">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54W7VFH"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <header class="py-4">
+      <div class="container mx-auto px-6 font-mono flex items-center justify-center">
+        <div class="flex-1">
+            <!-- Categories here one day -->
+        </div>
+        <div class="flex-1 text-xl text-center px-8">
+          <a class="inline-block bg-blue-800 text-white py-0 px-4" href="/">Matt Watson</a>
+        </div>
+        <div class="flex-1">
+          <ul class="hidden md:flex justify-end text-gray-700 items-center">
+            
+            <li class="ml-4">
+    <a href="https://github.com/recycledbeans" target="_blank">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="h-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+    </a>
+</li>
+<li class="ml-4">
+    <a href="https://twitter.com/recycledbeans" target="_blank">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="h-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    </a>
+</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container mx-auto my-4 px-6">
+      <div class="">
+    
+    <div class="mb-8 -mx-6 md:mx-0">
+        <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?ixlib=rb-1.2.1&q=60&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" class="w-full" alt="How This PHP Developer Ended Up With A (PHP-Free) Static Website">
+    </div>
+    
+    <div class="lg:flex">
+        <div class="article-body w-full md:pl-20 lg:pl-32">
+            <h1 id="article-title" class="font-sans font-bold text-4xl md:text-5xl text-blue-700 mb-3 leading-snug mt-0!">How This PHP Developer Ended Up With A (PHP-Free) Static Website</h1>
+            <div class="excerpt text-gray-600 text-2xl mb-2">The philosophies and decisions that went into choosing a static site for my personal website.</div>
+            
+            <div class="text-green-400 mb-6">25 May 2020
+                <span class="inline-block mx-3 text-blue-200">&bull;</span>
+                4 minute read
+                <span class="inline-block mx-3 text-blue-200">&bull;</span>
+                <a href="https://twitter.com/intent/tweet?text=How This PHP Developer Ended Up With A (PHP-Free) Static Website https://recycledbeans.com/2020/05/25/how-this-php-developer-ended-up-with-a-static-site/">Share on Twitter</a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="lg:flex">
+        <div class="article-body w-full sm:w-9/12 md:w-9/12 md:pl-20 lg:w-7/12 lg:pl-32">
+            <div class="article-content text-lg">
+                <p>I have a confession to make… Over the last few years, I’ve developed an increasing distaste for WordPress. It’s not that WordPress 
+isn’t a great platform, I really do think it’s wonderful and have used it on numerous client websites over the last 12 years or so.
+I’ve just been exposed to too many projects where developers have to take a perfectly good blogging platform 
+and try to hack it into a full web application with a barrage of plugins and workarounds. Again, this isn’t criticism of WP, just 
+a little background into why I started looking into alternatives to power my blog.</p>
+
+<p>It seems that over the last few years, the static site has been making a comeback. Of course, this time, they’re not coming 
+by way of Frontpage, Dreamweaver, or spaghetti code ala notepad.exe. They’re built using sophisticated static site
+generators like <a href="https://gohugo.io/" target="_blank">Hugo</a> and <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> 
+(the latter is the one I’ve been using). I could have used other tools, of course. I code in the Laravel framework 
+pretty much every single day of the week, and certainly could have quickly spun up a new installation with a model 
+or two, ran some migrations, and got to work. But, a few thoughts stayed with me and drove me to a static site.</p>
+
+<h3 id="source-control-everything">Source control everything.</h3>
+
+<p>Git is one of the best tools at our disposal. If I could, I would source control most everything. There are a few things 
+you should not source control (and a whole lot more that are not really practical), but text files are the perfect 
+candidate for being tracked. The idea of adding posts to a repository and seeing every little change in the writing process 
+makes my inner control freak very happy. Beyond that, having editorial content go through a git-flow-style cycle 
+is comfortable and familiar.</p>
+
+<p>With my Jekyll site, I use <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown</a> to create 
+content. This allows me to skip all of the HTML tag building, and almost exclusively focus on the writing. These Markdown 
+files get committed and are stored at GitHub while the compiled HTML does not. If I wanted or needed to, I could even 
+write and edit new posts directly in GitHub using their Markdown editor. More on how GitHub and other sites impacted 
+my decision in a bit.</p>
+
+<h3 id="do-not-draw-your-sword-to-kill-a-fly">Do not draw your sword to kill a fly.</h3>
+
+<p>The thought of not going down the overkill route has been stewing in my mind for some time. There’s a Korean proverb 
+that states “do not draw your sword to kill a fly.” It often makes sense to prepare for future growth. Certainly when 
+developing web applications, this is something for which I have learned to prepare. A client that says “we only need X” 
+inevitably needs “Y” when they’re hiring you to build an app. Maybe not today, maybe not tomorrow, but eventually. 
+However, when it comes to this simple project, a simple platform is what I desire. This isn’t an app with features that 
+will one day make me wish I had just used an MVC to begin with—it’s a blog.</p>
+
+<p>Beyond the simplicity of structure and workflow, you can’t beat the speed that comes with a web server only having to 
+deliver some static HTML, CSS, and Javascript files. Moreover, I’m not giving up a lot in terms of features since 
+there is <em><a href="https://jekyllrb.com/docs/" target="_blank">plenty of flexibility</a></em> in how a static site generator 
+produces your pages.</p>
+
+<h3 id="one-less-thing-to-update-and-pay-for">One less thing to update (and pay for).</h3>
+
+<p>Lastly, a very enticing prospect of using a static site is security—no WordPress security patches, plugin updates, or 
+Composer packages to keep up-to-date. Some static hosting services such as <a href="https://www.netlify.com/" target="_blank">Netlify</a> or 
+<a href="https://pages.github.com/" target="_blank">GitHub Pages</a> that have generous free versions for personal and business 
+sites also allow me keep my own domain name. If the free tier of hosting is ever removed or I need to host my website 
+somewhere else, the migration path is essentially pain-free. A quick rsync and DNS change is all that is needed to move 
+to a self-hosted, low-resource blog hosted on a DigitalOcean Droplet or Amazon S3.</p>
+
+<p>I’ve used Jekyll to build a number of static websites prior to this blog (mostly small landing pages and some 
+documentation sites), but this will be the first time I’m using it to update blog posts on a regular basis. I’ll let you 
+know how it goes.</p>
+
+<p>Now excuse me while I commit this post…</p>
+
+            </div>
+
+            <div class="my-12 py-3 pl-4 border-l-4 border-gray-300 text-blue-500 bg-gray-100">
+                <a href="https://github.com/recycledbeans/recycledbeans.com/blob/master/_posts/2020-05-25-how-this-php-developer-ended-up-with-a-static-site.md" target="_blank">Catch a mistake? Find a typo?</a>
+            </div>
+
+            <div class="my-12">
+                <div class="flex mt-6">
+                    <img class="rounded-full block h-24 w-24 mr-6 border-2 border-gray-200" src="https://avatars2.githubusercontent.com/u/13002230" alt="Matt Watson">
+                    <div class="text-blue-500">
+                        <h5 class="font-bold text-lg">About the Author</h5>
+                        <p class="my-4">Matt Watson is the Chief Technologist at <a href="https://devpartners.io" class="text-green-500">Development Partners</a>,
+                            a dev shop based in Fort Lauderdale, Florida.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="article-sidebar pl-0 md:pl-20 lg:pl-32 xl:pl-56 mt-4">
+
+        </div>
+    </div>
+</div>
+
+    </div>
+    <footer class="bg-blue-900 mt-24 text-white text-sm">
+      <div class="container mx-auto px-6 py-12">
+        <div class="md:flex justify-between">
+          <div class="mb-6 text-center md:text-left">Copyright &copy; 2022 Matthew Watson</div>
+          <div>
+              <ul class="flex justify-center md:justify-end items-center">
+                  <li class="ml-4">
+    <a href="https://github.com/recycledbeans" target="_blank">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="h-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+    </a>
+</li>
+<li class="ml-4">
+    <a href="https://twitter.com/recycledbeans" target="_blank">
+        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="h-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    </a>
+</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/dist/app.js?v=/app.js?id=b56d10f5fdb9298ceac4" type="text/javascript"></script>
+  </body>
+</html>
